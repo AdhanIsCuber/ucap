@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ucap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Baumans|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/material-kit.css">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section>
+        <div class="col-md-4 side-section">
+            <div class="title text-center">
+                <h2>Ucap</h2>
+                <h5>Web Speech AI Chatbot</h5>
+            </div>
+            <div class="record text-center centered">
+                <button class="button-record">
+                    <img src="img/sound-bars.png" alt="">
+                </button>
+                <div class="footer-record">
+                    <i class="material-icons">arrow_upward</i>
+                    <p>Click here<br>and<br>Conversation is starting...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 conversation">
+            <div class="panels">
+                <br>
+
+                <div class="talk-bubble tri-right round border left-top">
+                    <div class="talktext">
+                        <div class="col-md-2">
+                            <div class="round text-center">
+                                <img src="img/sound-bars.png" alt="">
+                                <h4>YOU</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p><em class="output-you">...</em></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="tes talk-bubble tri-right round border right-top">
+                    <div class="talktext">
+                        <div class="col-md-10">
+                            <div class="round text-center">
+                                <img src="img/sound-bars.png" alt="">
+                                <h4>BOT</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <p><em class="output-bot">...</em></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/material-kit.js"></script>
+    <script src="js/material.min.js"></script>
+</body>
+
+</html>
