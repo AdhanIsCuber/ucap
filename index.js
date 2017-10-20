@@ -1,14 +1,19 @@
 'use strict';
 const express = require('express');
 const app = express();
-const API = './api_secret';
+require('dotenv').config();
 
-const apiai = require("apiai")(API.APIAI_TOKEN_ID);
+const APIAI_TOKEN = process.env.APIAI_TOKEN;
+const APIAI_SESSION_ID = process.env.APIAI_SESSION_ID;
+
+const apiai = require("apiai")(APIAI_TOKEN);
 
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 
-const server = app.listen(5000);
+const server = app.listen(5000, () => {
+    console.log('Server running on port 5000');
+});
 
 const io = require("socket.io")(server);
 io.on("connection", function (socket) {
